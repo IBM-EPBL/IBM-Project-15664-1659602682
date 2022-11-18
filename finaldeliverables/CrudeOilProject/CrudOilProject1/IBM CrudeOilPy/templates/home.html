@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color:#f4f3f3;
+}
+
+.container{
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header{
+	background:#03A9F4;#35434a;
+	border-bottom:#448AFF 3px solid;
+	height:120px;
+	width:100%;
+	padding-top:30px;
+
+}
+
+.main-header{
+			text-align:center;
+			background-color: blue;
+			height:100px;
+			width:100%;
+			margin:0px;
+		}
+#brandname{
+	float:left;
+	font-size:30px;
+	color: #fff;
+	margin: 10px;
+}
+
+header h2{
+	text-align:center;
+	color:#fff;
+
+}
+
+
+
+.btn-info {background-color: #2196F3;
+	height:40px;
+	width:100px;} /* Blue */
+.btn-info:hover {background: #0b7dda;}
+
+
+.resultss{
+	border-radius: 15px 50px;
+    background: #345fe4;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+    .style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+    </style>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Crude-Oil-Price-Prediction  </h2>
+
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+			<form id="form1" name="form1" method="post" action="/result">
+		<table width="50%"  border="0" align="center">
+          
+          <tr>
+            <td width="42%" >&nbsp;</td>
+            <td width="27%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td >&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td >Year</td>
+            <td><input name="t1" type="number" id="t1"  required /></td>
+            <td width="31%"></td>
+          </tr>
+          <tr>
+            <td >&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td >Month<br></td>
+            <td><input name="t2" type="number" id="t2"  required /></td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td ><br></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td >Date</td>
+            <td><input name="t3" type="number" id="t3"  required /></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td >&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td >&nbsp;</td>
+            <td>&nbsp;</td>
+
+            <td></td>
+          </tr>
+          <tr>
+            <td >Prediction Price </td>
+            <td><span class="style1">{{res}}</span></td>
+            <td></td>
+          </tr>
+
+          
+          <tr>
+            <td >&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td >&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td >&nbsp;</td>
+            <td><input name="btn" type="submit" id="btn" value="Submit" />
+                <input type="reset" name="Submit2" value="Reset" /></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+		<p>&nbsp;</p>
+		<!-- <input type="text" name="comment"/> --><br/>
+		</form>
+
+	</div>
+
+
+
+
+</body>
+</html>
